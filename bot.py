@@ -28,8 +28,11 @@ if __name__ == "__main__":
     load_credentials()
 
     # Initialize instagram bot
-    bot = Bot().console_print
+    bot = Bot()
+    
     bot.login(username=USERNAME, password=PASSWORD, ask_for_code=True)
-    followers = bot.get_user_followers(USERNAME)
-    following = bot.get_user_following(USERNAME)
+    followers = bot.get_user_followers(USERNAME)            # Get followers
+    following = bot.get_user_following(USERNAME)            # Get following
+    
+    # Exit bot
     bot.logout()
